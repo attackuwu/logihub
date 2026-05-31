@@ -4,7 +4,7 @@
 
 **Управление RGB-подсветкой Logitech G102 на Linux — без G Hub, без демонов, без root.**
 
-[![GitHub](https://img.shields.io/badge/GitHub-attackuwu%2Floihub-181717?style=for-the-badge&logo=github)](https://github.com/attackuwu/loihub)
+[![GitHub](https://img.shields.io/badge/GitHub-attackuwu%2Flogihub-181717?style=for-the-badge&logo=github)](https://github.com/attackuwu/loihub)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-CachyOS%20%2F%20Linux-1793D1?style=for-the-badge&logo=linux&logoColor=white)](https://www.kernel.org/)
 [![GTK4](https://img.shields.io/badge/GTK-4.10%2B-7AAD0C?style=for-the-badge&logo=gnome&logoColor=white)](https://www.gtk.org/)
