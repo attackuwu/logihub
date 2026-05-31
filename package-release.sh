@@ -1,4 +1,5 @@
 #!/bin/sh
+# Собрать release-архив для GitHub: logihub + udev/
 set -e
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
