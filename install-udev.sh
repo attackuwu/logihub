@@ -1,6 +1,4 @@
 #!/bin/sh
-# Install udev rules so Logitech Hub on Linux can access /dev/hidraw*
-# without running as root.
 set -e
 
 DEST=/etc/udev/rules.d/99-logitech-hub.rules
