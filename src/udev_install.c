@@ -1,8 +1,3 @@
-/*
- * Install bundled udev rules so /dev/hidraw* is accessible without root.
- * Looks for udev/99-logitech-hub.rules next to the executable (release layout)
- * or one directory up (meson build layout: build/logihub → ../udev/…).
- */
 
 #include "udev_install.h"
 
