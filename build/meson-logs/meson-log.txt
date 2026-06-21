@@ -1,0 +1,60 @@
+Build started at 2026-05-31T22:32:41.051071
+Main binary: /usr/bin/python
+Build Options: -Dbuildtype=release -Dstrip=true
+Python system: Linux
+The Meson build system
+Version: 1.11.1
+Source dir: /home/attackuwu/Документы/Logitech Hub on Linux
+Build dir: /home/attackuwu/Документы/Logitech Hub on Linux/build
+Build type: native build
+Project name: logihub
+Project version: 1.0.0
+C compiler for the host machine: cc (gcc 16.1.1 "cc (GCC) 16.1.1 20260430")
+C linker for the host machine: cc ld.bfd 2.46.0
+-----------
+Detecting archiver via: `gcc-ar --version` -> 0
+stdout:
+GNU ar (GNU Binutils) 2.46.0
+Copyright (C) 2026 Free Software Foundation, Inc.
+Эта программа является открытым программным обеспечением; вы можете
+распространять её согласно условиям GNU General Public License версии 3 или
+(по вашему выбору) более новой версии.
+Эта программа не имеет абсолютно никаких гарантий.
+-----------
+C compiler for the build machine: cc (gcc 16.1.1 "cc (GCC) 16.1.1 20260430")
+C linker for the build machine: cc ld.bfd 2.46.0
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Dependency gtk4 for host machine found: YES 4.22.4 (cached)
+Running compile:
+Working directory:  /home/attackuwu/Документы/Logitech Hub on Linux/build/meson-private/tmpmto47g9x
+Code:
+int main(void) { return 0; }
+
+-----------
+Command line: `cc '/home/attackuwu/Документы/Logitech Hub on Linux/build/meson-private/tmpmto47g9x/testfile.c' -o '/home/attackuwu/Документы/Logitech Hub on Linux/build/meson-private/tmpmto47g9x/output.exe' -D_FILE_OFFSET_BITS=64 -O0 -U_FORTIFY_SOURCE -lm -Wl,--allow-shlib-undefined` -> 0
+Library m found: YES
+Build targets in project: 1
+
+logihub 1.0.0
+
+  User defined options
+    buildtype: release
+    strip    : true
+
+Found ninja-1.13.2 at /usr/bin/ninja
+Running compile:
+Working directory:  /home/attackuwu/Документы/Logitech Hub on Linux/build/meson-private/tmp0187dvnm
+Code:
+
+-----------
+Command line: `cc '/home/attackuwu/Документы/Logitech Hub on Linux/build/meson-private/tmp0187dvnm/testfile.c' -o '/home/attackuwu/Документы/Logitech Hub on Linux/build/meson-private/tmp0187dvnm/output.obj' -c -D_FILE_OFFSET_BITS=64 -O0 -U_FORTIFY_SOURCE --print-search-dirs` -> 0
+stdout:
+install: /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/
+programs: =/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../x86_64-pc-linux-gnu/bin/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../x86_64-pc-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../x86_64-pc-linux-gnu/lib/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../x86_64-pc-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../x86_64-pc-linux-gnu/16.1.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/:/lib/x86_64-pc-linux-gnu/16.1.1/:/lib/../lib/:/usr/lib/x86_64-pc-linux-gnu/16.1.1/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../x86_64-pc-linux-gnu/lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/
+-----------

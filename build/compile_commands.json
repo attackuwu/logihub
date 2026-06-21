@@ -1,0 +1,20 @@
+[
+  {
+    "directory": "/home/attackuwu/Документы/Logitech Hub on Linux/build",
+    "command": "cc -Ilogihub.p -I. -I.. -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/glycin-2 -I/usr/include/cairo -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/graphene-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -O3 -mfpmath=sse -msse -msse2 -DWITH_GZFILEOP -pthread -MD -MQ logihub.p/src_main.c.o -MF logihub.p/src_main.c.o.d -o logihub.p/src_main.c.o -c ../src/main.c",
+    "file": "../src/main.c",
+    "output": "logihub.p/src_main.c.o"
+  },
+  {
+    "directory": "/home/attackuwu/Документы/Logitech Hub on Linux/build",
+    "command": "cc -Ilogihub.p -I. -I.. -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/glycin-2 -I/usr/include/cairo -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/graphene-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -O3 -mfpmath=sse -msse -msse2 -DWITH_GZFILEOP -pthread -MD -MQ logihub.p/src_device.c.o -MF logihub.p/src_device.c.o.d -o logihub.p/src_device.c.o -c ../src/device.c",
+    "file": "../src/device.c",
+    "output": "logihub.p/src_device.c.o"
+  },
+  {
+    "directory": "/home/attackuwu/Документы/Logitech Hub on Linux/build",
+    "command": "cc -Ilogihub.p -I. -I.. -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/glycin-2 -I/usr/include/cairo -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/pixman-1 -I/usr/include/graphene-1.0 -I/usr/lib/graphene-1.0/include -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/sysprof-6 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c17 -O3 -mfpmath=sse -msse -msse2 -DWITH_GZFILEOP -pthread -MD -MQ logihub.p/src_udev_install.c.o -MF logihub.p/src_udev_install.c.o.d -o logihub.p/src_udev_install.c.o -c ../src/udev_install.c",
+    "file": "../src/udev_install.c",
+    "output": "logihub.p/src_udev_install.c.o"
+  }
+]

@@ -1,0 +1,10 @@
+# Logihub for Linux — правила доступа к hidraw
+# Обычно устанавливаются автоматически при первом запуске logihub (pkexec).
+# Вручную: ./install-udev.sh
+
+# G102 LIGHTSYNC / G203 LIGHTSYNC (shared PID)
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c092", MODE="0666"
+# G102 (older revision)
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c084", MODE="0666"
+# G203 LIGHTSYNC (alternate PID)
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c08b", MODE="0666"

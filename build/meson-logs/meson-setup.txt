@@ -1,0 +1,22 @@
+The Meson build system
+Version: 1.11.1
+Source dir: /home/attackuwu/Документы/Logitech Hub on Linux
+Build dir: /home/attackuwu/Документы/Logitech Hub on Linux/build
+Build type: native build
+Project name: logihub
+Project version: 1.0.0
+C compiler for the host machine: cc (gcc 16.1.1 "cc (GCC) 16.1.1 20260430")
+C linker for the host machine: cc ld.bfd 2.46.0
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Dependency gtk4 for host machine found: YES 4.22.4 (cached)
+Library m found: YES
+Build targets in project: 1
+
+logihub 1.0.0
+
+  User defined options
+    buildtype: release
+    strip    : true
+
+Found ninja-1.13.2 at /usr/bin/ninja

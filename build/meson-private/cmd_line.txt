@@ -1,0 +1,6 @@
+[options]
+buildtype = release
+strip = true
+
+[properties]
+
