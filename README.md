@@ -3,7 +3,7 @@
 **Открытая альтернатива Logitech G HUB для управления RGB-подсветкой мышей Logitech под Linux.**  
 Нативный C + GTK4. Без Wine. Без проприетарного ПО.
 
-[![Лицензия](https://img.shields.io/badge/лицензия-GPLv2-blue?style=flat-square)](LICENSE)
+[![Лицензия](https://img.shields.io/badge/лицензия-CC0%201.0-blue?style=flat-square)](LICENSE)
 [![Платформа](https://img.shields.io/badge/платформа-Linux%20x86__64-1793d1?style=flat-square&logo=linux&logoColor=white)](https://github.com/attackuwu/logihub/releases)
 [![GTK](https://img.shields.io/badge/GTK-4.10+-3584e4?style=flat-square&logo=gtk&logoColor=white)](https://gtk.org)
 [![Устройство](https://img.shields.io/badge/устройство-Logitech_G102_LIGHTSYNC-success?style=flat-square)](https://www.logitechg.com)
@@ -139,18 +139,13 @@ sudo apt install meson ninja-build build-essential pkg-config libgtk-4-dev
 
 ## Лицензия
 
-**GNU General Public License v2.0** — полный текст в файле [LICENSE](LICENSE).
+**CC0 1.0 Universal** — полный текст в файле [LICENSE](LICENSE).
 
 ```
-LogiHub for Linux
-Copyright (C) 2026  attackuwu
+SPDX-License-Identifier: CC0-1.0
 
-Это свободное программное обеспечение: вы можете распространять и/или изменять
-его на условиях GNU General Public License, опубликованной Free Software Foundation;
-версии 2 лицензии.
-
-При любом нарушении условий GPL-2.0 дело будет направлено в
-Free Software Foundation (FSF) и GitHub.
+Насколько это возможно по закону, авторы передали эту работу
+в общественное достояние согласно CC0 1.0 Universal.
 ```
 
 ---
