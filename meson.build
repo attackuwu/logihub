@@ -1,7 +1,7 @@
 project(
   'logihub',
   'c',
-  version: '1.0.0',
+  version: '1.1.0',
   license: 'CC0-1.0',
   default_options: ['warning_level=2', 'c_std=c17'],
 )
