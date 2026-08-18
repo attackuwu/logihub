@@ -722,6 +722,15 @@ activate(GtkApplication *app, gpointer user_data)
   update_control_visibility(w);
   w->suppress = FALSE;
 
+  if (!udev_rules_installed()) {
+    GError *err = NULL;
+    gtk_label_set_text(GTK_LABEL(w->state_label), "Установка правил udev...");
+    if (!udev_install_rules(&err) && err) {
+      g_warning("udev: %s", err->message);
+      g_error_free(err);
+    }
+  }
+
   DeviceResult r = connect_device(w);
   if (r == DEVICE_OK)
     on_connected(w);

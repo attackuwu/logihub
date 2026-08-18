@@ -10,44 +10,15 @@
 #include "udev_install.h"
 
 #include <errno.h>
-#include <glib/gstdio.h>
-#include <limits.h>
-#include <stdio.h>
-#include <unistd.h>
 #include <sys/stat.h>
 
 #define UDEV_DEST "/etc/udev/rules.d/99-logitech-hub.rules"
-#define RULES_NAME "99-logitech-hub.rules"
 
-static gboolean
-file_readable(const char *path)
-{
-  return access(path, R_OK) == 0;
-}
-
-static gboolean
-find_rules_source(char *out, gsize out_len)
-{
-  GError *err = NULL;
-  gchar *exe = g_file_read_link("/proc/self/exe", &err);
-  if (!exe) {
-    if (err) g_error_free(err);
-    return FALSE;
-  }
-
-  gchar *dir = g_path_get_dirname(exe);
-  g_free(exe);
-
-  g_snprintf(out, out_len, "%s/udev/%s", dir, RULES_NAME);
-  if (file_readable(out)) {
-    g_free(dir);
-    return TRUE;
-  }
-
-  g_snprintf(out, out_len, "%s/../udev/%s", dir, RULES_NAME);
-  g_free(dir);
-  return file_readable(out);
-}
+static const char UDEV_RULES[] =
+  "# Logitech G102/G203 LIGHTSYNC access rules\n"
+  "SUBSYSTEM==\"hidraw\", ATTRS{idVendor}==\"046d\", ATTRS{idProduct}==\"c092\", MODE=\"0666\"\n"
+  "SUBSYSTEM==\"hidraw\", ATTRS{idVendor}==\"046d\", ATTRS{idProduct}==\"c084\", MODE=\"0666\"\n"
+  "SUBSYSTEM==\"hidraw\", ATTRS{idVendor}==\"046d\", ATTRS{idProduct}==\"c08b\", MODE=\"0666\"\n";
 
 gboolean
 udev_rules_installed(void)
@@ -59,18 +30,13 @@ udev_rules_installed(void)
 gboolean
 udev_install_rules(GError **error)
 {
-  char src[PATH_MAX];
-  if (!find_rules_source(src, sizeof(src))) {
-    g_set_error(error, G_FILE_ERROR, G_FILE_ERROR_NOENT,
-                "Не найден файл udev/%s рядом с программой", RULES_NAME);
-    return FALSE;
-  }
-
+  gchar *quoted_rules = g_shell_quote(UDEV_RULES);
   gchar *shell_cmd = g_strdup_printf(
-      "cp '%s' '%s' && "
+      "printf '%%s' %s > '%s' && "
       "udevadm control --reload-rules && "
       "udevadm trigger --action=add --subsystem-match=hidraw",
-      src, UDEV_DEST);
+      quoted_rules, UDEV_DEST);
+  g_free(quoted_rules);
 
   gchar *argv[] = {"pkexec", "sh", "-c", shell_cmd, NULL};
 

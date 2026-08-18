@@ -1,5 +1,5 @@
 #!/bin/sh
-# Собрать release-архив для GitHub: logihub + udev/
+# Собрать release-архив для GitHub
 set -e
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
@@ -11,9 +11,8 @@ meson setup build --buildtype=release -Dstrip=true 2>/dev/null || meson setup bu
 meson compile -C build
 
 rm -rf "$PKG"
-mkdir -p "$PKG/udev"
+mkdir -p "$PKG"
 cp build/logihub "$PKG/"
-cp udev/99-logitech-hub.rules "$PKG/udev/"
 strip "$PKG/logihub" 2>/dev/null || true
 
 cd "$OUT"

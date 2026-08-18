@@ -1,17 +1,7 @@
-<video src="./video/video.webm" controls width="100%">
-  Ваш браузер не поддерживает встроенное видео.
-  <a href="./video/video.webm">Открыть видеоинструкцию по запуску LogiHub</a>.
-</video>
-
 # LogiHub for Linux
 
-**Открытая альтернатива Logitech G HUB для управления RGB-подсветкой мышей Logitech под Linux.**  
-Нативный C + GTK4. Без Wine. Без проприетарного ПО.
-
-[![Лицензия](https://img.shields.io/badge/лицензия-CC0%201.0-blue?style=flat-square)](LICENSE)
-[![Платформа](https://img.shields.io/badge/платформа-Linux%20x86__64-1793d1?style=flat-square&logo=linux&logoColor=white)](https://github.com/attackuwu/logihub/releases)
-[![GTK](https://img.shields.io/badge/GTK-4.10+-3584e4?style=flat-square&logo=gtk&logoColor=white)](https://gtk.org)
-[![Устройство](https://img.shields.io/badge/устройство-Logitech_G102_LIGHTSYNC-success?style=flat-square)](https://www.logitechg.com)
+Простая программа для управления RGB-подсветкой мышей Logitech в Linux.
+Проект написан на C и GTK4. Основная среда разработки: Arch Linux / CachyOS.
 
 ---
 
@@ -46,17 +36,10 @@
 
 ---
 
-## Поддержка дистрибутивов
+## Среда разработки
 
-| Дистрибутив | Статус |
-|-------------|:------:|
-| **Fedora Kinoite 44** | Основная платформа разработки — полная поддержка |
-| Arch Linux / Manjaro / EndeavourOS | Ожидается работа (тот же набор пакетов) |
-| Fedora 39+ | Требуется GTK4 ≥ 4.10 |
-| Ubuntu 24.04+ | Требуется GTK4 ≥ 4.10 |
-| Прочие дистрибутивы | Совместимость не гарантирована — тестирование приветствуется |
-
-Готовые бинарные сборки компилируются под CachyOS (x86_64). На других системах рекомендуется сборка из исходников.
+Разработка и проверка проекта выполняются на Arch Linux / CachyOS.
+Готовые бинарники собираются для Linux x86_64.
 
 ---
 
@@ -74,7 +57,7 @@ cd logihub-1.0
 При первом запуске появится окно `pkexec` — подтвердите установку udev-правил.  
 После установки **переподключите мышь** (USB-кабель или приёмник).
 
-### Вариант 2: Сборка из исходников
+### Сборка из исходников
 
 ```bash
 git clone https://github.com/attackuwu/logihub.git
@@ -86,26 +69,29 @@ meson compile -C build
 
 ---
 
-## Зависимости для сборки
+Для Arch Linux и CachyOS установите зависимости:
 
-| Пакет | Мин. версия | Назначение |
-|-------|:----------:|------------|
-| `meson` | ≥ 1.0 | Система сборки |
-| `ninja` | — | Исполнитель сборки |
-| `gcc` или `clang` | C17 | Компилятор |
-| `pkg-config` | — | Поиск библиотек |
-| `gtk4` | ≥ 4.10 | Графический тулкит |
-| `glib` | (в составе GTK4) | Базовые типы и события |
-
-**CachyOS / Arch Linux:**
 ```bash
 sudo pacman -S meson ninja gcc pkgconf gtk4
 ```
 
-**Ubuntu / Debian:**
+Для Ubuntu / Debian:
+
 ```bash
 sudo apt install meson ninja-build build-essential pkg-config libgtk-4-dev
 ```
+
+Требуется GTK4 версии 4.10 или новее.
+
+### Debug-сборка для разработки
+
+```bash
+meson setup build --buildtype=debug
+meson compile -C build
+./build/logihub
+```
+
+После первой настройки достаточно выполнять `meson compile -C build`.
 
 ---
 
@@ -118,10 +104,10 @@ sudo apt install meson ninja-build build-essential pkg-config libgtk-4-dev
 
 ---
 
-## Известные ограничения
+## Ограничения
 
 - Поддерживаемые USB PID: только `c092`, `c084`, `c08b`
-- Готовые бинарники: только Linux x86_64 (собраны на CachyOS)
+- Готовые бинарники: только Linux x86_64
 - Язык интерфейса: русский (английская локализация в планах)
 - Функционал: только RGB-подсветка — без профилей, макросов и настроек DPI
 - Требуется GTK4 ≥ 4.10 — может отсутствовать в некоторых LTS-дистрибутивах
