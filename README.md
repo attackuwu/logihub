@@ -1,4 +1,4 @@
-# LogiHub for Linux 1.1
+# LogiHub™ for Linux 1.1
 
 Простая программа для управления RGB-подсветкой мышей Logitech в Linux.
 Проект написан на C и GTK4. Основная среда разработки: Arch Linux / CachyOS.
